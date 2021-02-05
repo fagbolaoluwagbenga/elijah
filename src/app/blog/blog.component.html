@@ -1,0 +1,119 @@
+<app-header></app-header>
+
+<div id="one">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2 nav-col">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link" routerLink="/login">login</a>
+          </li>
+          <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link" *ngIf="userIsAuthenticated">{{userName}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 details-col">
+        <h1>welcome to the our official blog page, where all the sorosoke happens, OPG...</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sunt, quae alias quia libero consequatur officia asperiores recusandae reiciendis nisi tenetur ipsam optio, cupiditate dolorum exercitationem quibusdam molestias, ab numquam fuga magni illum repellendus beatae hic. Impedit saepe similique pariatur modi blanditiis suscipit voluptas laudantium ab, quod omnis odio. Voluptatem voluptates dolores fugiat nihil? Quo iusto nobis temporibus explicabo, architecto iste deserunt! Aliquam vel id nobis tempora modi vero odio quisquam! Doloremque, nulla sit amet ducimus dolor animi dicta sapiente!</p>
+        <button class="btn"  routerLink="/blog/new">create new blog post </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 nav-col2">
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link" routerLink="/login">register</a>
+          </li>
+          <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link" routerLink="/dashboard">dashboard</a>
+          </li>
+          <li *ngIf="userIsAuthenticated">
+            <button mat-button (click)="onLogout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 details-img">
+        <img src="assets/images/2.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="two" class="py-5">
+  <div class="containe">
+    <div class="row">
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+      <div class="col-md-2 pad-col"></div>
+      <div class="col-md-10">
+        <h1>gists</h1>
+        <h2>as e dey hot</h2>
+
+        <div class="container cancel" multi="true" *ngIf="posts.length > 0 && !isLoading">
+          <div class="row omg" *ngFor="let post of posts">
+            <div class="col-md-7">
+              <h4>{{post.title}}</h4>
+              <p>{{post.content}}</p>
+              <button class="btn" routerLink="/show/{{post.id}}">learn more</button>
+            </div>
+            <div class="col-md-5">
+              <img [src]="post.imagePath" [alt]="post.title" class="img-responsive">
+            </div>
+          </div>
+          <p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>
+
+          <!-- <div class="row omg">
+            <div class="col-md-7">
+              <h4>post title</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat, magni qui ratione ducimus iste beatae quos asperiores exercitationem tempore veniam deserunt obcaecati modi adipisci itaque saepe ea facilis molestiae accusantium! Quidem ipsam quae omnis repudiandae, a libero harum quos? Rem, laudantium expedita corrupti illum voluptatum at id nam saepe!</p>
+              <button class="btn">learn more</button>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/images/BLOG.jpg" alt="" class="img-responsive">
+            </div>
+          </div>
+
+          <div class="row omg">
+            <div class="col-md-7">
+              <h4>post title</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat, magni qui ratione ducimus iste beatae quos asperiores exercitationem tempore veniam deserunt obcaecati modi adipisci itaque saepe ea facilis molestiae accusantium! Quidem ipsam quae omnis repudiandae, a libero harum quos? Rem, laudantium expedita corrupti illum voluptatum at id nam saepe!</p>
+              <button class="btn">learn more</button>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/images/BLOG.jpg" alt="" class="img-responsive">
+            </div>
+          </div>
+
+          <div class="row omg">
+            <div class="col-md-7">
+              <h4>post title</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat, magni qui ratione ducimus iste beatae quos asperiores exercitationem tempore veniam deserunt obcaecati modi adipisci itaque saepe ea facilis molestiae accusantium! Quidem ipsam quae omnis repudiandae, a libero harum quos? Rem, laudantium expedita corrupti illum voluptatum at id nam saepe!</p>
+              <button class="btn">learn more</button>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/images/BLOG.jpg" alt="" class="img-responsive">
+            </div>
+          </div>
+
+          <div class="row omg">
+            <div class="col-md-7">
+              <h4>post title</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat, magni qui ratione ducimus iste beatae quos asperiores exercitationem tempore veniam deserunt obcaecati modi adipisci itaque saepe ea facilis molestiae accusantium! Quidem ipsam quae omnis repudiandae, a libero harum quos? Rem, laudantium expedita corrupti illum voluptatum at id nam saepe!</p>
+              <button class="btn">learn more</button>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/images/BLOG.jpg" alt="" class="img-responsive">
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

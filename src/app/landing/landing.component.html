@@ -1,0 +1,226 @@
+<app-header></app-header>
+
+<div id="one">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2 nav-col">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blog">blog</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#two">about us</a>
+          </li>
+          <li *ngIf="userIsAuthenticated">
+            <button mat-button (click)="onLogout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 details-col">
+        <h1>welcome to the ogbenge and correct gist forum for naija, here na Amebo village, sorosoke joorh...</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sunt, quae alias quia libero consequatur officia asperiores recusandae reiciendis nisi tenetur ipsam optio, cupiditate dolorum exercitationem quibusdam molestias, ab numquam fuga magni illum repellendus beatae hic. Impedit saepe similique pariatur modi blanditiis suscipit voluptas laudantium ab, quod omnis odio. Voluptatem voluptates dolores fugiat nihil? Quo iusto nobis temporibus explicabo, architecto iste deserunt! Aliquam vel id nobis tempora modi vero odio quisquam! Doloremque, nulla sit amet ducimus dolor animi dicta sapiente!</p>
+        <button class="btn" routerLink="/login">enter now</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 nav-col2">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#three">services</a>
+          </li>
+          <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link" routerLink="/login">login</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 details-img">
+        <img src="assets/images/cocktail.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="two" class="py-5">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2 pad-col"></div>
+      <div class="col-md-10">
+        <h1>who we are</h1>
+        <hr>
+        <div class="container cancel">
+
+          <div class="row">
+            <div class="col-md-6">
+              <h2>about us</h2>
+              <h4>why we are here is also important</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, in esse vero dolor rerum, inventore eveniet at sunt impedit eligendi reprehenderit hic totam vel ratione quod voluptas quaerat. Quisquam tempora autem pariatur laudantium natus blanditiis adipisci veritatis culpa provident velit! Perferendis atque dignissimos autem provident magnam dolorem expedita quaerat voluptates?</p>
+            </div>
+            <div class="col-md-6">
+              <img src="assets/images/4.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="three" class="py-5">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <h1>sorosoke, what are we about and what do we bring to the public?</h1>
+        <hr>
+        <div class="container cancel">
+
+          <h2>our services</h2>
+          <!-- <h4>explore our varities of goodies offered for premium</h4> -->
+          <div class="row">
+            <div class="col-md-6 bg-img">
+              <div class="card">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, a!</h1>
+                <p><span>>></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vero veritatis omnis expedita repudiandae dolorem eos enim harum velit doloremque?</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, a!</h1>
+                <p> <span>>></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vero veritatis omnis expedita repudiandae dolorem eos enim harum velit doloremque?</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, a!</h1>
+                <p> <span>>></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vero veritatis omnis expedita repudiandae dolorem eos enim harum velit doloremque?</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, a!</h1>
+                <p> <span>>></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vero veritatis omnis expedita repudiandae dolorem eos enim harum velit doloremque?</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, a!</h1>
+                <p> <span>>></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vero veritatis omnis expedita repudiandae dolorem eos enim harum velit doloremque?</p>
+              </div>
+            </div>
+            <div class="col-md-6 bg-img2">
+              <div class="card">
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, a!</h1>
+                <p> <span>>></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vero veritatis omnis expedita repudiandae dolorem eos enim harum velit doloremque?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="four" class="py-5">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <h1>we would like to keep you up to date about our services</h1>
+        <hr>
+        <div class="container cancel">
+
+          <h2>newsletter</h2>
+          <h4>subscribe to our newsletter and always be one step ahead</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, in esse vero dolor rerum, inventore eveniet at sunt impedit eligendi reprehenderit hic totam vel ratione quod voluptas quaerat. Quisquam tempora autem pariatur laudantium natus blanditiis adipisci veritatis culpa provident velit! Perferendis atque dignissimos autem provident magnam dolorem expedita quaerat voluptates?</p>
+          <mat-form-field class="form-one" appearance="outline">
+            <mat-label>enter e-mail here <address></address></mat-label>
+            <input matInput type="text" formControlName="email">
+            <button class="btn">send</button>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="five" class="py-5">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <h1>listen to the reviews of our esteemed users all around the world</h1>
+        <hr>
+        <div class="container cancel">
+
+          <h2>testimonials</h2>
+          <h4>people talk, read the gossips behind sorosoke platform</h4>
+          <div class="card">
+            <owl-carousel-o [options]="customOptions">
+
+              <ng-container *ngFor="let slide of dynamicSlides">
+                <ng-template carouselSlide [id]="slide.id">
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><sup style="margin-top: 4rem; font-size: 5rem; font-weight: bold; font-family: 'Montserrat', sans-serif;">"</sup> {{slide.content}}</p>
+                      <h1 class="text-right"> {{slide.title}}</h1>
+                    </div>
+                    <div class="col-md-6">
+                      <img [src]="slide.src" [alt]="slide.alt">
+                    </div>
+                  </div>
+
+                </ng-template>
+              </ng-container>
+
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="six" class="py-5">
+  <div class="containe">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <h1>contact us</h1>
+        <hr>
+        <div class="container cancel">
+
+          <div class="row">
+            <div class="col-md-4">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem facere numquam dignissimos necessitatibus nisi iusto sunt sit odio quia doloremque!</p>
+              <p>we would love to hear from you, please drop your wonderful opinion in the form by the right</p>
+            </div>
+            <div class="col-md-8">
+              <h2>your contact</h2>
+              <mat-form-field class="form-one" appearance="outline">
+                <mat-label>full name <address></address></mat-label>
+                <input matInput type="text" formControlName="email">
+              </mat-form-field>
+              <mat-form-field class="form-one" appearance="outline">
+                <mat-label>e-mail <address></address></mat-label>
+                <input matInput type="text" formControlName="email">
+              </mat-form-field>
+              <h2>lets hear your thoughts</h2>
+              <mat-form-field class="form-one" appearance="outline">
+                <mat-label>e-mail <address></address></mat-label>
+                <textarea matInput type="text" formControlName="email"></textarea>
+              </mat-form-field>
+              <button class="btn">send message</button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
